@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const slides = [
   {
@@ -61,8 +62,27 @@ export default function HeroCarousel() {
           {/* Background with gradient overlay */}
           <div className={`absolute inset-0 bg-linear-to-r ${slide.bgColor}`} />
           
-          {/* Placeholder for image - would be actual product photo */}
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1920')] bg-cover bg-center opacity-70" />
+          {/* Desktop Image */}
+          <div className="hidden md:block absolute inset-0 opacity-70">
+            <Image
+              src="https://res.cloudinary.com/dgs35slge/image/upload/v1764586311/cncakjae_adqirf.png"
+              alt="Hero Desktop"
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
+          </div>
+
+          {/* Mobile Image */}
+          <div className="block md:hidden absolute inset-0 opacity-70">
+            <Image
+              src="https://res.cloudinary.com/dgs35slge/image/upload/v1764587164/hero%20home%20moblie.png"
+              alt="Hero Mobile"
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
+          </div>
           
           {/* Content */}
           <div className="absolute inset-0 flex items-end justify-center pb-24 md:pb-32">

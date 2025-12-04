@@ -1,10 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, Heart, History, MapPin } from 'lucide-react';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'About Us | Heera Panna Saree',
-  description: 'Discover the heritage of Heera Panna Saree, a trusted name in Maheshwari and Silk sarees in Indore for over 20 years.',
+export const metadata: Metadata = {
+  title: 'About Us | Heritage of Heera Panna Saree Indore',
+  description: 'Discover the 20+ year legacy of Heera Panna Saree in Rajwada, Indore. We specialize in authentic Maheshwari, Chanderi, and Silk sarees.',
+  alternates: {
+    canonical: 'https://heerapannasaree.com/about',
+  },
+  openGraph: {
+    title: 'About Us | Heritage of Heera Panna Saree Indore',
+    description: 'Discover the 20+ year legacy of Heera Panna Saree in Rajwada, Indore.',
+    images: ['https://images.unsplash.com/photo-1583391726247-12b52ce0645d?q=80&w=1974&auto=format&fit=crop'],
+  },
 };
 
 export default function AboutPage() {

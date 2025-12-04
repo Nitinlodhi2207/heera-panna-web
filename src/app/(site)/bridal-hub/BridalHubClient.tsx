@@ -42,7 +42,7 @@ const videos = [
   }
 ];
 
-export default function BridalHubPage() {
+export default function BridalHubClient() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {

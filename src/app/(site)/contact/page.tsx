@@ -1,5 +1,6 @@
-import { Mail, MapPin, Phone, Clock, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Clock } from 'lucide-react';
 import Link from 'next/link';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
   title: 'Contact Us | Heera Panna Saree',
@@ -85,71 +86,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-5 md:p-10 border-t-4 border-[#591C21] shadow-lg">
-            <h2 className="text-xl md:text-2xl font-display font-bold text-[#591C21] mb-4 md:mb-6">
-              Send us a Message
-            </h2>
-            <form className="space-y-4 md:space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div className="space-y-1 md:space-y-2">
-                  <label htmlFor="firstName" className="text-xs md:text-sm font-medium text-[#2C1810]">First Name</label>
-                  <input 
-                    type="text" 
-                    id="firstName" 
-                    className="w-full px-3 py-2 md:px-4 md:py-3 bg-[#FFFAF0] border border-[#D4AF37]/30 focus:border-[#591C21] focus:outline-none transition-colors text-sm"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div className="space-y-1 md:space-y-2">
-                  <label htmlFor="lastName" className="text-xs md:text-sm font-medium text-[#2C1810]">Last Name</label>
-                  <input 
-                    type="text" 
-                    id="lastName" 
-                    className="w-full px-3 py-2 md:px-4 md:py-3 bg-[#FFFAF0] border border-[#D4AF37]/30 focus:border-[#591C21] focus:outline-none transition-colors text-sm"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-1 md:space-y-2">
-                <label htmlFor="email" className="text-xs md:text-sm font-medium text-[#2C1810]">Email Address</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-3 py-2 md:px-4 md:py-3 bg-[#FFFAF0] border border-[#D4AF37]/30 focus:border-[#591C21] focus:outline-none transition-colors text-sm"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div className="space-y-1 md:space-y-2">
-                <label htmlFor="phone" className="text-xs md:text-sm font-medium text-[#2C1810]">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  className="w-full px-3 py-2 md:px-4 md:py-3 bg-[#FFFAF0] border border-[#D4AF37]/30 focus:border-[#591C21] focus:outline-none transition-colors text-sm"
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-
-              <div className="space-y-1 md:space-y-2">
-                <label htmlFor="message" className="text-xs md:text-sm font-medium text-[#2C1810]">Message</label>
-                <textarea 
-                  id="message" 
-                  rows={4}
-                  className="w-full px-3 py-2 md:px-4 md:py-3 bg-[#FFFAF0] border border-[#D4AF37]/30 focus:border-[#591C21] focus:outline-none transition-colors resize-none text-sm"
-                  placeholder="How can we help you?"
-                ></textarea>
-              </div>
-
-              <button 
-                type="submit" 
-                className="w-full bg-[#591C21] text-white font-bold py-3 md:py-4 hover:bg-[#4A151A] transition-colors flex items-center justify-center gap-2 shadow-md text-sm md:text-base"
-              >
-                Send Message
-                <Send className="h-3 w-3 md:h-4 md:w-4" />
-              </button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </div>
 

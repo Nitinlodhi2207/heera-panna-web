@@ -3,28 +3,55 @@ import Link from 'next/link';
 import { Phone, Star, Truck, ShieldCheck, ArrowLeft } from 'lucide-react';
 import { getProductBySlug } from '@/lib/sanity';
 import { urlFor } from '@/lib/sanity';
+import { PRODUCTS } from '@/lib/products';
+import { Metadata } from 'next';
+import StructuredData from '@/components/StructuredData';
 
-// Mock data for development
-const MOCK_PRODUCT = {
-  _id: '1',
-  name: 'Royal Maheshwari Silk Saree',
-  slug: 'royal-maheshwari-silk',
-  description: 'Experience the grandeur of authentic Maheshwari silk. This saree features intricate zari work on the border and a rich, lustrous texture that drapes beautifully.',
-  detailedDescription: 'Handwoven in the town of Maheshwar, this saree is a testament to centuries-old weaving traditions. The fabric is a blend of silk and cotton, known for its lightweight feel and glossy finish. Perfect for weddings, festivals, and special occasions.',
-  price: 4500,
-  category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
-  fabric: 'Silk Cotton Blend',
-  weave: 'Handloom',
-  occasion: 'Wedding / Festive',
-  imageUrl: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop',
-  gallery: [
-    'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1583391733958-e023765f350a?q=80&w=1000&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1000&auto=format&fit=crop'
-  ]
-};
+type Props = {
+  params: Promise<{ slug: string }>
+}
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata(
+  { params }: Props
+): Promise<Metadata> {
+  const { slug } = await params;
+  
+  let product = null;
+  try {
+    product = await getProductBySlug(slug);
+  } catch (error) {
+    console.error("Error fetching product for metadata:", error);
+  }
+
+  if (!product) {
+    product = PRODUCTS.find(p => p.slug === slug);
+  }
+
+  if (!product) {
+    return {
+      title: 'Product Not Found',
+    }
+  }
+
+  const imageUrl = product.imageUrl 
+    ? (typeof product.imageUrl === 'string' ? product.imageUrl : urlFor(product.imageUrl).url())
+    : '/og-image.jpg';
+
+  return {
+    title: `${product.name} | Heera Panna Saree`,
+    description: product.description?.slice(0, 160) || `Buy ${product.name} online at Heera Panna Saree. Premium quality ${product.fabric} saree.`,
+    alternates: {
+      canonical: `https://heerapannasaree.com/products/${slug}`,
+    },
+    openGraph: {
+      title: product.name,
+      description: product.description?.slice(0, 160),
+      images: [imageUrl],
+    }
+  }
+}
+
+export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
 
   let product = null;
@@ -34,17 +61,53 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     console.error("Error fetching product:", error);
   }
 
-  // Fallback to mock
+  // Fallback to local data
   if (!product) {
-    // In a real app, we might show 404, but for demo we show mock if slug matches mock
-    product = { ...MOCK_PRODUCT, name: slug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') };
+    product = PRODUCTS.find(p => p.slug === slug);
   }
+
+  if (!product) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Product Not Found</h1>
+          <Link href="/collections/all" className="text-primary hover:underline">
+            Back to Collections
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const imageUrl = product.imageUrl 
+    ? (typeof product.imageUrl === 'string' ? product.imageUrl : urlFor(product.imageUrl).url())
+    : '';
 
   const whatsappMessage = `Hi, I am interested in the ${product.name}. Can you please share the price and availability?`;
   const whatsappLink = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="min-h-screen bg-background pb-20">
+      <StructuredData 
+        type="product"
+        data={{
+          name: product.name,
+          image: imageUrl,
+          description: product.description,
+          url: `https://heerapannasaree.com/products/${slug}`,
+          price: product.price
+        }}
+      />
+      <StructuredData 
+        type="breadcrumb"
+        data={[
+          { name: "Home", url: "https://heerapannasaree.com" },
+          { name: "Collections", url: "https://heerapannasaree.com/collections" },
+          { name: product.category?.name || "Sarees", url: `https://heerapannasaree.com/collections/${product.category?.slug?.current || 'all'}` },
+          { name: product.name, url: `https://heerapannasaree.com/products/${slug}` }
+        ]}
+      />
+
       <div className="container px-4 py-8">
         <Link href="/collections/all" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6">
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to Collections
@@ -56,7 +119,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-secondary/20 border">
               {product.imageUrl ? (
                  <Image
-                 src={typeof product.imageUrl === 'string' ? product.imageUrl : urlFor(product.imageUrl).url()}
+                 src={imageUrl}
                  alt={product.name}
                  fill
                  className="object-cover"

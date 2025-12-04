@@ -2,6 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getCategories, urlFor } from '@/lib/sanity';
 import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Collections | Maheshwari, Silk & Cotton Sarees',
+  description: 'Browse our extensive collection of authentic sarees including Maheshwari, Chanderi, Banarasi, and daily wear cotton sarees.',
+  alternates: {
+    canonical: 'https://heerapannasaree.com/collections',
+  },
+};
 
 // Mock data for development
 const MOCK_CATEGORIES = [

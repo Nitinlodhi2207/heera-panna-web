@@ -53,7 +53,7 @@ export default function Footer() {
             <ul className="space-y-4 text-[#2C1810]/80">
               <li><Link href="/about" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Our Story</Link></li>
               <li><Link href="/contact" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Contact Us</Link></li>
-              <li><Link href="/blog" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Saree Care</Link></li>
+              <li><Link href="/blog" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Our Journal</Link></li>
               <li><Link href="/terms" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Terms of Service</Link></li>
             </ul>
           </div>

@@ -45,12 +45,13 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden lg:flex items-center gap-12">
-          {['Maheshwari', 'Silk', 'Cotton', 'Bridal Hub', 'About', 'Contact'].map((item) => (
+          {['Maheshwari', 'Silk', 'Cotton', 'Bridal Hub', 'Blog', 'About', 'Contact'].map((item) => (
             <Link 
               key={item}
               href={
                 item === 'About' ? '/about' : 
                 item === 'Contact' ? '/contact' : 
+                item === 'Blog' ? '/blogs' :
                 item === 'Bridal Hub' ? '/bridal-hub' :
                 `/collections/${item.toLowerCase()}`
               }
@@ -67,12 +68,13 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <button className="text-[#2C1810] hover:text-[#591C21] transition-colors">
+          <button className="text-[#2C1810] hover:text-[#591C21] transition-colors" aria-label="Search">
             <Search className="h-4 w-4" />
           </button>
           <Link 
             href="https://wa.me/919876543210" 
             target="_blank"
+            aria-label="Enquire on WhatsApp"
             className={cn(
               "inline-flex items-center justify-center rounded-sm bg-[#591C21] px-5 text-xs font-display font-medium text-white shadow-md transition-all hover:bg-[#4A151A] hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#D4AF37]",
               isScrolled ? "py-1.5" : "py-2"

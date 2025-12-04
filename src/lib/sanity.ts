@@ -20,10 +20,13 @@ export function urlFor(source: any) {
   return builder.image(source);
 }
 
-// GROQ Queries
+// --- GROQ Queries ---
+
+// Products
 export const productsQuery = `
   *[_type == "product"] | order(_createdAt desc) {
     _id,
+    _updatedAt,
     name,
     slug,
     images,
@@ -68,13 +71,52 @@ export const productBySlugQuery = `
 export const categoriesQuery = `
   *[_type == "category"] | order(title asc) {
     _id,
+    _updatedAt,
     title,
     slug,
     image
   }
 `;
 
-// Fetch Helper
+// Blog Posts
+export const postsQuery = `
+  *[_type == "post"] | order(publishedAt desc) {
+    _id,
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    excerpt
+  }
+`;
+
+export const recentPostsQuery = `
+  *[_type == "post"] | order(publishedAt desc)[0...3] {
+    _id,
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    excerpt
+  }
+`;
+
+export const postBySlugQuery = `
+  *[_type == "post" && slug.current == $slug][0] {
+    _id,
+    title,
+    slug,
+    mainImage,
+    body,
+    publishedAt,
+    excerpt,
+    seoTitle,
+    seoDescription
+  }
+`;
+
+// --- Fetch Helpers ---
+
 export async function getProducts() {
   if (!client) return [];
   return client.fetch(productsQuery);
@@ -93,4 +135,19 @@ export async function getProductBySlug(slug: string) {
 export async function getCategories() {
   if (!client) return [];
   return client.fetch(categoriesQuery);
+}
+
+export async function getPosts() {
+  if (!client) return [];
+  return client.fetch(postsQuery, {}, { next: { revalidate: 60 } });
+}
+
+export async function getRecentPosts() {
+  if (!client) return [];
+  return client.fetch(recentPostsQuery, {}, { next: { revalidate: 60 } });
+}
+
+export async function getPostBySlug(slug: string) {
+  if (!client) return null;
+  return client.fetch(postBySlugQuery, { slug }, { next: { revalidate: 60 } });
 }

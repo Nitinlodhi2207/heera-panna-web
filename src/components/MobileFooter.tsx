@@ -31,10 +31,10 @@ export default function MobileFooter() {
             Timeless elegance of Indian heritage. Crafting heirlooms for generations.
           </p>
           <div className="flex space-x-4">
-            <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform">
+            <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform" aria-label="Follow us on Instagram">
               <Instagram className="h-5 w-5" />
             </Link>
-            <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform">
+            <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform" aria-label="Follow us on Facebook">
               <Facebook className="h-5 w-5" />
             </Link>
           </div>
@@ -84,6 +84,7 @@ export default function MobileFooter() {
             <div className={cn("overflow-hidden transition-all duration-300 ease-in-out", openSection === 'company' ? "max-h-64 opacity-100" : "max-h-0 opacity-0")}>
               <ul className="space-y-4 pb-4 text-sm text-[#2C1810]/80 pl-2">
                 <li><Link href="/about" className="block py-1">About Us</Link></li>
+                <li><Link href="/blog" className="block py-1">Our Journal</Link></li>
                 <li><Link href="/contact" className="block py-1">Contact Us</Link></li>
                 <li className="flex items-start gap-3 pt-2">
                   <MapPin className="h-4 w-4 text-[#591C21] mt-1 flex-shrink-0" />
