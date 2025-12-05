@@ -69,7 +69,7 @@ export default async function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-            {['Maheshwari', 'Embroidered Saree', 'Designer Saree', 'Printed Saree', 'Silk Saree', 'Wedding'].map((category) => {
+            {['Maheshwari', 'Embroidered Saree', 'Designer Saree', 'Printed Saree', 'Silk Saree', 'Lehenga'].map((category) => {
               const thumbnail = getCategoryThumbnail(category);
               return (
                 <Link key={category} href={`/collections/${category.toLowerCase().replace(/\s+/g, '-')}`} className="group relative aspect-3/4 overflow-hidden rounded-lg bg-secondary/20">
@@ -126,8 +126,12 @@ export default async function Home() {
               </Link>
             </div>
             <div className="order-1 md:order-2 aspect-square bg-gray-200 rounded-xl overflow-hidden relative">
-               {/* Placeholder for Shop Image */}
-               <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">Store Image</div>
+               <Image
+                 src="https://res.cloudinary.com/dgs35slge/image/upload/v1764938444/hg_tiaqkd.png"
+                 alt="Heera Panna Store"
+                 fill
+                 className="object-cover"
+               />
             </div>
           </div>
         </div>
@@ -139,7 +143,7 @@ export default async function Home() {
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">Visit Our Store</h2>
           <div className="w-full h-[200px] md:h-[350px] rounded-lg overflow-hidden shadow-md">
             <iframe 
-              src="https://maps.google.com/maps?q=22.7417085,75.8424378&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=22.7189120,75.8554697&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

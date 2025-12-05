@@ -16,7 +16,7 @@ export default function BottomNavigation() {
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 h-16 bg-[#FFFAF0]/95 backdrop-blur supports-backdrop-filter:bg-[#FFFAF0]/90 border-t border-[#D4AF37]/30 px-2 pb-safe shadow-[0_-4px_10px_-1px_rgba(0,0,0,0.05)]">
-      <div className="grid h-full grid-cols-5 items-center justify-items-center">
+      <div className="grid h-full grid-cols-4 items-center justify-items-center">
         <Link 
           href="/" 
           className={cn(
@@ -59,17 +59,6 @@ export default function BottomNavigation() {
         >
           <Info className={cn("h-5 w-5 transition-transform duration-300", isActive('/about') && "scale-110 fill-current")} />
           <span className={cn("text-[10px] font-medium", isActive('/about') && "font-bold")}>About</span>
-        </Link>
-        
-        <Link 
-          href="/contact" 
-          className={cn(
-            "flex flex-col items-center justify-center gap-1 w-full h-full transition-all duration-300",
-            isActive('/contact') ? "text-[#591C21]" : "text-[#8B5E3C] hover:text-[#591C21]/70"
-          )}
-        >
-          <MapPin className={cn("h-5 w-5 transition-transform duration-300", isActive('/contact') && "scale-110 fill-current")} />
-          <span className={cn("text-[10px] font-medium", isActive('/contact') && "font-bold")}>Visit Us</span>
         </Link>
       </div>
     </nav>

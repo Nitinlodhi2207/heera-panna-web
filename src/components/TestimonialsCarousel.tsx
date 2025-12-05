@@ -7,38 +7,45 @@ import Image from 'next/image';
 const testimonials = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400',
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764846114/KLKCVLNN_kw23cx.png',
     rating: 5,
-    title: 'Authentic',
-    review: 'Material is too good and authentic'
+    title: 'Beautiful saree!',
+    review: 'Beautiful saree! The fabric is soft and comfortable, and the colors look elegant. Exactly as shown in the picture. Loved it!'
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400',
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764846337/khadi_tkojej.png',
     rating: 5,
-    title: 'Beautiful sarees. Lovely colours and beautiful borders',
-    review: 'Beautiful sarees. Lovely colours and beautiful borders'
+    title: 'Great quality and lovely design',
+    review: 'Great quality and lovely design. It gives a very elegant look. Highly recommended!'
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?w=400',
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764846912/gfhg_ed1ahd.png',
     rating: 5,
-    title: 'Maroon-White Bagh Print Cotton Suit BCS0016',
-    review: 'Maroon-White Bagh Print Cotton Suit BCS0016'
+    title: 'I absolutely loved this lehenga!',
+    review: 'I absolutely loved this lehenga! The pink color is vibrant and feminine, and the embroidery looks stunning. It fits comfortably and made me feel really confident and elegant. Perfect for any special occasion!'
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400',
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764846505/Gemini_Generated_Image_48syom48syom48sy_wcluus.jpg',
     rating: 5,
-    title: 'Very pretty saree. Thanks!',
-    review: 'Very pretty saree. Thanks!'
+    title: 'Loved the saree!',
+    review: 'Loved the saree! The color is gorgeous, the fabric feels great, and the embroidery looks very elegant. Totally worth it!'
   },
   {
     id: 5,
     image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400',
     rating: 5,
-    title: 'Brown Bagh Cotton Suit BCS0033',
-    review: 'Brown Bagh Cotton Suit BCS0033'
+    title: 'The saree looks beautiful',
+    review: 'The saree looks beautiful and the design is very elegant. The fabric feels comfortable and the color is perfect. Really happy with this purchase!'
+  },
+  {
+    id: 6,
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764846698/AAH_ajdlao.png',
+    rating: 5,
+    title: 'Simply stunning!',
+    review: 'Simply stunning! The intricate details and the quality of the fabric are unmatched. It fits perfectly and looks even better in person. A truly royal addition to my wardrobe!'
   }
 ];
 

@@ -1,58 +1,53 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { Eye, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
+import { Eye, X, Play } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const products = [
 	{
 		id: 1,
-		name: 'Cream Georgette Hand Embroidered Beads Work Pre...',
-		views: 53,
-		image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?w=400',
-		label: '1 CINEMAS NOVEMBER 14'
+		video: 'https://res.cloudinary.com/dgs35slge/video/upload/v1764844684/1204_3_kfqdjr.mp4',
+		views: '1.2k',
+		label: 'TRENDING'
 	},
 	{
 		id: 2,
-		name: 'Cream Georgette Hand Embroidered Beads Work Pre...',
-		views: 80,
-		image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400',
-		label: 'RAIR'
+		video: 'https://res.cloudinary.com/dgs35slge/video/upload/v1764843542/1204_rte4wb.mp4',
+		views: '856',
+		label: 'NEW'
 	},
 	{
 		id: 3,
-		name: 'Red Silk Zardosi Hand Embroidered Sharara Suit',
-		views: 81,
-		image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400',
-		label: 'RAIR'
+		video: 'https://res.cloudinary.com/dgs35slge/video/upload/v1764843645/1203_1_anhqwu.mp4',
+		views: '2.1k',
+		label: 'POPULAR'
 	},
 	{
 		id: 4,
-		name: 'Blue Faux Georgette Sequins Lehenga',
-		views: 357,
-		image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?w=400',
-		label: 'RAIR'
+		video: 'https://res.cloudinary.com/dgs35slge/video/upload/v1764843709/1203_sipbrs.mp4',
+		views: '3.5k',
+		label: 'BESTSELLER'
 	},
 	{
 		id: 5,
-		name: 'Light Pink Organza Digital Print Hand Embroidered...',
-		views: 229,
-		image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400',
-		label: 'RAIR'
+		video: 'https://res.cloudinary.com/dgs35slge/video/upload/v1764843873/1204_1_idw9jv.mp4',
+		views: '942',
+		label: 'LATEST'
 	},
 	{
 		id: 6,
-		name: 'Pink Organza Zari Hand Embroidered Sequins With Mirro...',
-		views: 184,
-		image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400',
-		label: 'RAIR'
+		video: 'https://res.cloudinary.com/dgs35slge/video/upload/v1764844048/1204_2_aporsf.mp4',
+		views: '1.5k',
+		label: 'FEATURED'
 	}
 ];
 
 export default function GramWorthyLooks() {
+	const [selectedVideo, setSelectedVideo] = useState<typeof products[0] | null>(null);
+
 	return (
-		<section className="py-6 md:py-8 bg-background">
+		<section className="py-8 bg-background">
 			<div className="container px-4">
 				<h2 className="font-display text-2xl md:text-3xl font-bold text-center mb-6">
 					Gram-Worthy Looks
@@ -62,51 +57,71 @@ export default function GramWorthyLooks() {
 				<div className="relative">
 					<div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-6 md:overflow-visible">
 						{products.map((product) => (
-							<Link
+							<div
 								key={product.id}
-								href={`/product/${product.id}`}
-								className="group relative flex-shrink-0 w-[160px] md:w-auto snap-start"
+								onClick={() => setSelectedVideo(product)}
+								className="group relative flex-shrink-0 w-[140px] md:w-auto snap-start cursor-pointer"
 							>
 								{/* Product Card */}
-								<div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-gray-100">
-									<Image
-										src={product.image}
-										alt={product.name}
-										fill
-										className="object-cover group-hover:scale-105 transition-transform duration-300"
+								<div className="relative aspect-[9/16] overflow-hidden rounded-xl bg-gray-100 border border-gray-200 shadow-sm">
+									<video
+										src={product.video}
+										autoPlay
+										muted
+										loop
+										playsInline
+										className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
 									/>
 
+									{/* Overlay Gradient */}
+									<div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60" />
+
+									{/* Play Icon Overlay */}
+									<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+										<div className="bg-white/30 backdrop-blur-sm p-3 rounded-full">
+											<Play className="h-6 w-6 text-white fill-white" />
+										</div>
+									</div>
+
 									{/* View Count Badge */}
-									<div className="absolute top-2 left-2 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full text-[10px] font-medium">
-										<Eye className="h-2.5 w-2.5" />
+									<div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-white text-xs font-medium z-10">
+										<Eye className="h-3.5 w-3.5" />
 										{product.views}
 									</div>
-
-									{/* Label Badge */}
-									<div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[8px] font-medium">
-										{product.label}
-									</div>
-
-									{/* Product Name Overlay */}
-									<div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-2">
-										<p className="text-white text-xs font-medium line-clamp-2">
-											{product.name}
-										</p>
-									</div>
 								</div>
-							</Link>
+							</div>
 						))}
 					</div>
-
-					{/* Scroll Arrow (Mobile Only) */}
-					<button
-						className="md:hidden absolute -right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white shadow-lg flex items-center justify-center"
-						aria-label="Scroll right"
-					>
-						<ChevronRight className="h-4 w-4 text-foreground" />
-					</button>
 				</div>
 			</div>
+
+			{/* Video Modal */}
+			{selectedVideo && (
+				<div 
+					className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200" 
+					onClick={() => setSelectedVideo(null)}
+				>
+					<button 
+						onClick={() => setSelectedVideo(null)}
+						className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors p-2 bg-black/20 rounded-full backdrop-blur-md z-50"
+					>
+						<X className="h-8 w-8" />
+					</button>
+					
+					<div 
+						className="relative w-full max-w-[350px] aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200 ring-1 ring-white/10" 
+						onClick={e => e.stopPropagation()}
+					>
+						<video 
+							src={selectedVideo.video} 
+							autoPlay 
+							controls 
+							playsInline
+							className="w-full h-full object-cover"
+						/>
+					</div>
+				</div>
+			)}
 
 			<style jsx global>{`
 				.scrollbar-hide::-webkit-scrollbar {

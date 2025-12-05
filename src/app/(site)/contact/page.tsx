@@ -93,7 +93,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <div className="h-[250px] md:h-[400px] w-full bg-[#E5E7EB] relative">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.086722663664!2d75.85516631496234!3d22.71956898510733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd10d5c5c5d5%3A0x4234234234234234!2sRajwada%2C%20Indore%2C%20Madhya%20Pradesh%20452002!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+          src="https://maps.google.com/maps?q=22.7189120,75.8554697&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 

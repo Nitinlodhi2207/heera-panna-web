@@ -1,4 +1,20 @@
 export const PRODUCTS = [
+  // Lehenga Collection
+  {
+    _id: 'l1',
+    name: 'Exclusive Bridal Lehenga',
+    slug: 'exclusive-bridal-lehenga',
+    description: 'Exquisite Bridal Lehenga with intricate embroidery and premium fabric.',
+    category: { name: 'Lehenga', slug: { current: 'lehenga' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764938662/bbridal_nwbjaw.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/v1764938662/bbridal_nwbjaw.png'
+    ],
+    fabric: 'Silk / Velvet',
+    weave: 'Embroidered',
+    occasion: 'Wedding / Bridal'
+  },
+
   // Maheshwari Collection
   {
     _id: 'm1',

@@ -26,19 +26,18 @@ export default function Header() {
   return (
     <header 
       className={cn(
-        "hidden md:block sticky top-0 z-50 w-full bg-[#FFFAF0]/95 backdrop-blur supports-backdrop-filter:bg-[#FFFAF0]/80 border-b border-[#D4AF37]/20 shadow-sm transition-all duration-300",
-        isScrolled ? "py-1" : "py-2"
+        "hidden md:block sticky top-0 z-50 w-full bg-[#FFFAF0]/95 backdrop-blur supports-backdrop-filter:bg-[#FFFAF0]/80 border-b border-[#D4AF37]/20 shadow-sm transition-all duration-300"
       )}
     >
-      <div className={cn("container flex items-center justify-between transition-all duration-300", isScrolled ? "h-12" : "h-16")}>
+      <div className={cn("container flex items-center justify-between transition-all duration-300", isScrolled ? "h-14" : "h-20")}>
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 transition-transform hover:scale-105 duration-300">
           <Image 
             src="/Heera-logo-svg.svg" 
             alt="Heera Panna Logo" 
-            width={180} 
-            height={60} 
-            className={cn("w-auto transition-all duration-300", isScrolled ? "h-8" : "h-10")}
+            width={300} 
+            height={90} 
+            className={cn("w-auto transition-all duration-300", isScrolled ? "h-12" : "h-16")}
             priority
           />
         </Link>

@@ -2,16 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, name: 'Exclusive Sarees', image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200' },
-  { id: 2, name: 'Garbha Reshami', image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=200' },
-  { id: 3, name: 'Tissue Sarees', image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?w=200' },
-  { id: 4, name: 'Zari Butti', image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200' },
-  { id: 5, name: 'Zari Checks', image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=200' },
-  { id: 6, name: '75% Silk Sarees', image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?w=200' },
-  { id: 7, name: 'Ganga Jamuna Border', image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200' },
-  { id: 8, name: 'Chanderi Saree', image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=200' },
-  { id: 9, name: 'Butta Pallu Saree', image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?w=200' },
-  { id: 10, name: 'Indonesian Print', image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200' }
+  { id: 1, name: 'Maheshwari', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764663053/lkshf_bgrgtj.png' },
+  { id: 2, name: 'Embroidered Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764592553/knn_hpirhw.png' },
+  { id: 3, name: 'Designer Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764591768/khkdf_sozhuw.png' },
+  { id: 4, name: 'Printed Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764591660/ygas_ozdixb.png' },
+  { id: 5, name: 'Silk Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764591955/hjhj_rjriwz.png' },
+  { id: 6, name: 'Wedding', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764588481/45_wzgahp.png' }
 ];
 
 export default function CategoryFilter() {
@@ -23,7 +19,7 @@ export default function CategoryFilter() {
         </h2>
 
         {/* Category Circles Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4 md:gap-6 mb-4">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 mb-4">
           {categories.map((category) => (
             <Link
               key={category.id}

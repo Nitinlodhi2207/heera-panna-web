@@ -31,7 +31,7 @@ export default function MobileFooter() {
             Timeless elegance of Indian heritage. Crafting heirlooms for generations.
           </p>
           <div className="flex space-x-4">
-            <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform" aria-label="Follow us on Instagram">
+            <Link href="https://www.instagram.com/heera_panna_saree/" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform" aria-label="Follow us on Instagram">
               <Instagram className="h-5 w-5" />
             </Link>
             <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] shadow-md hover:scale-105 transition-transform" aria-label="Follow us on Facebook">

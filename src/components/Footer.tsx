@@ -22,7 +22,7 @@ export default function Footer() {
               Embodying the timeless elegance of Indian heritage. We craft sarees that are not just garments, but heirlooms passed down through generations.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#591C21] transition-all duration-300 shadow-md">
+              <Link href="https://www.instagram.com/heera_panna_saree/" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#591C21] transition-all duration-300 shadow-md">
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#591C21] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#591C21] transition-all duration-300 shadow-md">

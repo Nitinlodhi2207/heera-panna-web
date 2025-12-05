@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, Star, Truck, ShieldCheck, ArrowLeft } from 'lucide-react';
+import { Star, Truck, ShieldCheck, ArrowLeft } from 'lucide-react';
 import { getProductBySlug } from '@/lib/sanity';
 import { urlFor } from '@/lib/sanity';
 import { PRODUCTS } from '@/lib/products';
 import { Metadata } from 'next';
 import StructuredData from '@/components/StructuredData';
+import ProductGallery from '@/components/ProductGallery';
+import ProductActions from '@/components/ProductActions';
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -83,8 +85,12 @@ export default async function ProductPage({ params }: Props) {
     ? (typeof product.imageUrl === 'string' ? product.imageUrl : urlFor(product.imageUrl).url())
     : '';
 
-  const whatsappMessage = `Hi, I am interested in the ${product.name}. Can you please share the price and availability?`;
+  const productUrl = `https://heerapannasaree.com/products/${slug}`;
+  const whatsappMessage = `Hi, I am interested in the ${product.name}. Can you please share the price and availability? Product Link: ${productUrl}`;
   const whatsappLink = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
+
+  // Ensure we have an array of images for the gallery
+  const galleryImages = product.gallery || (product.imageUrl ? [product.imageUrl] : []);
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -94,7 +100,7 @@ export default async function ProductPage({ params }: Props) {
           name: product.name,
           image: imageUrl,
           description: product.description,
-          url: `https://heerapannasaree.com/products/${slug}`,
+          url: productUrl,
           price: product.price
         }}
       />
@@ -115,36 +121,7 @@ export default async function ProductPage({ params }: Props) {
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
           {/* Image Gallery Section */}
-          <div className="space-y-4">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-secondary/20 border">
-              {product.imageUrl ? (
-                 <Image
-                 src={imageUrl}
-                 alt={product.name}
-                 fill
-                 className="object-cover"
-                 priority
-               />
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">No Image</div>
-              )}
-            </div>
-            {/* Thumbnails (Mock logic for now if gallery missing) */}
-            <div className="grid grid-cols-4 gap-2 md:gap-4">
-              {(product.gallery || [product.imageUrl, product.imageUrl, product.imageUrl]).slice(0, 4).map((img: any, idx: number) => (
-                <div key={idx} className="relative aspect-square rounded-lg overflow-hidden bg-secondary/20 cursor-pointer border hover:border-primary transition-colors">
-                   {img && (
-                      <Image
-                      src={typeof img === 'string' ? img : urlFor(img).url()}
-                      alt={`${product.name} view ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                   )}
-                </div>
-              ))}
-            </div>
-          </div>
+          <ProductGallery images={galleryImages} productName={product.name} />
 
           {/* Product Details Section */}
           <div className="md:sticky md:top-24 h-fit">
@@ -183,19 +160,11 @@ export default async function ProductPage({ params }: Props) {
             </div>
 
             {/* Actions */}
-            <div className="space-y-4">
-              <a 
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold text-white transition-transform hover:scale-[1.02] hover:bg-[#20bd5a] shadow-lg"
-              >
-                <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" /> Request Price on WhatsApp
-              </a>
-              <p className="text-[10px] md:text-xs text-center text-muted-foreground">
-                Clicking this button will open WhatsApp with a pre-filled enquiry message.
-              </p>
-            </div>
+            <ProductActions 
+              productName={product.name} 
+              productUrl={productUrl} 
+              whatsappLink={whatsappLink} 
+            />
 
             {/* Trust Badges */}
             <div className="mt-10 grid grid-cols-3 gap-4 text-center">
