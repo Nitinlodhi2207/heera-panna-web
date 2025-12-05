@@ -65,7 +65,7 @@ export default function HeroCarousel() {
           {/* Desktop Image */}
           <div className="hidden md:block absolute inset-0 opacity-70">
             <Image
-              src="https://res.cloudinary.com/dgs35slge/image/upload/v1764586311/cncakjae_adqirf.png"
+              src="https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764586311/cncakjae_adqirf.png"
               alt="Hero Desktop"
               fill
               className="object-cover"
@@ -76,7 +76,7 @@ export default function HeroCarousel() {
           {/* Mobile Image */}
           <div className="block md:hidden absolute inset-0 opacity-70">
             <Image
-              src="https://res.cloudinary.com/dgs35slge/image/upload/v1764587164/hero%20home%20moblie.png"
+              src="https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764587164/hero%20home%20moblie.png"
               alt="Hero Mobile"
               fill
               className="object-cover"

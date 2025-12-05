@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, name: 'Maheshwari', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764663053/lkshf_bgrgtj.png' },
-  { id: 2, name: 'Embroidered Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764592553/knn_hpirhw.png' },
-  { id: 3, name: 'Designer Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764591768/khkdf_sozhuw.png' },
-  { id: 4, name: 'Printed Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764591660/ygas_ozdixb.png' },
-  { id: 5, name: 'Silk Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764591955/hjhj_rjriwz.png' },
-  { id: 6, name: 'Wedding', image: 'https://res.cloudinary.com/dgs35slge/image/upload/v1764588481/45_wzgahp.png' }
+  { id: 1, name: 'Maheshwari', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764663053/lkshf_bgrgtj.png' },
+  { id: 2, name: 'Embroidered Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764592553/knn_hpirhw.png' },
+  { id: 3, name: 'Designer Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764591768/khkdf_sozhuw.png' },
+  { id: 4, name: 'Printed Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764591660/ygas_ozdixb.png' },
+  { id: 5, name: 'Silk Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764591955/hjhj_rjriwz.png' },
+  { id: 6, name: 'Wedding', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764588481/45_wzgahp.png' }
 ];
 
 export default function CategoryFilter() {
