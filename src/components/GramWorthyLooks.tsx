@@ -46,6 +46,14 @@ const products = [
 export default function GramWorthyLooks() {
 	const [selectedVideo, setSelectedVideo] = useState<typeof products[0] | null>(null);
 
+	const getOptimizedVideoUrl = (url: string) => {
+		return url.replace('/upload/', '/upload/w_400,q_auto,f_auto/');
+	};
+
+	const getPosterUrl = (url: string) => {
+		return url.replace('/upload/', '/upload/w_400,q_auto,f_auto,so_0/').replace('.mp4', '.jpg');
+	};
+
 	return (
 		<section className="py-8 bg-background">
 			<div className="container px-4">
@@ -65,7 +73,8 @@ export default function GramWorthyLooks() {
 								{/* Product Card */}
 								<div className="relative aspect-[9/16] overflow-hidden rounded-xl bg-gray-100 border border-gray-200 shadow-sm">
 									<video
-										src={product.video}
+										src={getOptimizedVideoUrl(product.video)}
+										poster={getPosterUrl(product.video)}
 										autoPlay
 										muted
 										loop
