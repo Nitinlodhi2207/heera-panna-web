@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'About Us | Heritage of Heera Panna Saree Indore',
   description: 'Discover the 20+ year legacy of Heera Panna Saree in Rajwada, Indore. We specialize in authentic Maheshwari, Chanderi, and Silk sarees.',
   alternates: {
-    canonical: 'https://heerapannasaree.com/about',
+    canonical: 'https://www.heerapannasaree.com/about',
   },
   openGraph: {
     title: 'About Us | Heritage of Heera Panna Saree Indore',

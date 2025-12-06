@@ -65,7 +65,7 @@ export default async function Image() {
               fontWeight: 'bold',
             }}
           >
-            heerapannasaree.com
+            www.heerapannasaree.com
           </div>
         </div>
       </div>

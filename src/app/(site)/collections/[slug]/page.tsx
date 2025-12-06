@@ -19,7 +19,7 @@ export async function generateMetadata(
     title: `${categoryName} Sarees | Heera Panna Saree Collection`,
     description: `Shop exclusive ${categoryName} sarees at Heera Panna Saree. Authentic handloom quality, perfect for weddings and festivals.`,
     alternates: {
-      canonical: `https://heerapannasaree.com/collections/${slug}`,
+      canonical: `https://www.heerapannasaree.com/collections/${slug}`,
     },
     openGraph: {
       title: `${categoryName} Sarees | Heera Panna Saree`,
@@ -59,16 +59,16 @@ export default async function CategoryPage({ params }: Props) {
         data={{
           name: `${categoryName} Collection`,
           description: `Shop exclusive ${categoryName} sarees at Heera Panna Saree.`,
-          url: `https://heerapannasaree.com/collections/${slug}`,
+          url: `https://www.heerapannasaree.com/collections/${slug}`,
           image: products[0]?.imageUrl || ''
         }}
       />
       <StructuredData 
         type="breadcrumb"
         data={[
-          { name: "Home", url: "https://heerapannasaree.com" },
-          { name: "Collections", url: "https://heerapannasaree.com/collections" },
-          { name: categoryName, url: `https://heerapannasaree.com/collections/${slug}` }
+          { name: "Home", url: "https://www.heerapannasaree.com" },
+          { name: "Collections", url: "https://www.heerapannasaree.com/collections" },
+          { name: categoryName, url: `https://www.heerapannasaree.com/collections/${slug}` }
         ]}
       />
       

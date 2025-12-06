@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Our Collections | Maheshwari, Silk & Cotton Sarees',
   description: 'Browse our extensive collection of authentic sarees including Maheshwari, Chanderi, Banarasi, and daily wear cotton sarees.',
   alternates: {
-    canonical: 'https://heerapannasaree.com/collections',
+    canonical: 'https://www.heerapannasaree.com/collections',
   },
 };
 

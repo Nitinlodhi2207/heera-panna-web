@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Heera Panna Saree | Premium Maheshwari & Silk Sarees in Indore",
   description: "Discover the finest collection of Maheshwari, Silk, and Cotton sarees at Heera Panna Saree, Rajwada, Indore. Trusted heritage brand for wedding and daily wear.",
   alternates: {
-    canonical: "https://heerapannasaree.com",
+    canonical: "https://www.heerapannasaree.com",
   },
 };
 

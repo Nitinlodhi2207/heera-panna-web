@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getProducts, getCategories } from '@/lib/sanity';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://heerapannasaree.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.heerapannasaree.com';
 
   // Fetch dynamic data
   const products = await getProducts();

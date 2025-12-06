@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://heerapannasaree.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://www.heerapannasaree.com"),
   title: "Heera Panna Saree | Premium Maheshwari & Silk Sarees in Indore",
   description: "Discover the finest collection of Maheshwari, Silk, and Cotton sarees at Heera Panna Saree, Rajwada, Indore. Trusted heritage brand for wedding and daily wear.",
   keywords: ["Maheshwari sarees", "Silk sarees Indore", "Rajwada saree shop", "Heera Panna Saree", "Wedding sarees Indore", "Cotton sarees", "Handloom sarees", "Chanderi sarees", "Banarasi sarees"],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Trusted heritage brand for wedding and daily wear in Indore. Shop our exclusive collection of Maheshwari, Chanderi, and Silk sarees.",
     type: "website",
     locale: "en_IN",
-    url: "https://heerapannasaree.com",
+    url: "https://www.heerapannasaree.com",
     siteName: "Heera Panna Saree",
     images: [
       {
@@ -86,8 +86,8 @@ export default function SiteLayout({
           type="localBusiness" 
           data={{
             name: "Heera Panna Saree",
-            url: "https://heerapannasaree.com",
-            image: "https://heerapannasaree.com/logo.png", // Placeholder
+            url: "https://www.heerapannasaree.com",
+            image: "https://www.heerapannasaree.com/logo.png", // Placeholder
             phone: "+919876543210", // Placeholder, need from client
             address: {
               street: "Rajwada",

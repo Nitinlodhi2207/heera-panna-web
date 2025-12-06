@@ -43,7 +43,7 @@ export async function generateMetadata(
     title: `${product.name} | Heera Panna Saree`,
     description: product.description?.slice(0, 160) || `Buy ${product.name} online at Heera Panna Saree. Premium quality ${product.fabric} saree.`,
     alternates: {
-      canonical: `https://heerapannasaree.com/products/${slug}`,
+      canonical: `https://www.heerapannasaree.com/products/${slug}`,
     },
     openGraph: {
       title: product.name,
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: Props) {
     ? (typeof product.imageUrl === 'string' ? product.imageUrl : urlFor(product.imageUrl).url())
     : '';
 
-  const productUrl = `https://heerapannasaree.com/products/${slug}`;
+  const productUrl = `https://www.heerapannasaree.com/products/${slug}`;
   const whatsappMessage = `Hi, I am interested in the ${product.name}. Can you please share the price and availability? Product Link: ${productUrl}`;
   const whatsappLink = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -107,10 +107,10 @@ export default async function ProductPage({ params }: Props) {
       <StructuredData 
         type="breadcrumb"
         data={[
-          { name: "Home", url: "https://heerapannasaree.com" },
-          { name: "Collections", url: "https://heerapannasaree.com/collections" },
-          { name: product.category?.name || "Sarees", url: `https://heerapannasaree.com/collections/${product.category?.slug?.current || 'all'}` },
-          { name: product.name, url: `https://heerapannasaree.com/products/${slug}` }
+          { name: "Home", url: "https://www.heerapannasaree.com" },
+          { name: "Collections", url: "https://www.heerapannasaree.com/collections" },
+          { name: product.category?.name || "Sarees", url: `https://www.heerapannasaree.com/collections/${product.category?.slug?.current || 'all'}` },
+          { name: product.name, url: `https://www.heerapannasaree.com/products/${slug}` }
         ]}
       />
 
