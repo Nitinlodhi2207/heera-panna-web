@@ -25,7 +25,7 @@ export default function ProductActions({ productName, productUrl, whatsappLink }
         },
         body: JSON.stringify({
           name: 'WhatsApp Shopper',
-          email: 'whatsapp-click@heerapannasaree.com',
+          email: 'ajaysatwani8@gmail.com',
           subject: `Product Interest: ${productName}`,
           message: `A user clicked the "Request Price on WhatsApp" button for the product: ${productName}.\n\nProduct Link: ${productUrl}`
         }),

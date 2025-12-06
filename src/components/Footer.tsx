@@ -71,11 +71,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="h-5 w-5 text-[#591C21] flex-shrink-0" />
-                <p>+91 98765 43210</p>
+                <p>+91 89828 26000</p>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="h-5 w-5 text-[#591C21] flex-shrink-0" />
-                <p>hello@heerapannasaree.com</p>
+                <p>ajaysatwani8@gmail.com</p>
               </div>
               <Link 
                 href="/contact" 

@@ -50,9 +50,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#591C21] mb-1 text-sm md:text-base">Call / WhatsApp</h3>
-                    <p className="text-[#2C1810]/80 mb-1 md:mb-2 text-xs md:text-base">+91 98765 43210</p>
+                    <p className="text-[#2C1810]/80 mb-1 md:mb-2 text-xs md:text-base">+91 89828 26000</p>
                     <Link 
-                      href="https://wa.me/919876543210" 
+                      href="https://wa.me/918982826000" 
                       target="_blank"
                       className="text-xs md:text-sm font-medium text-[#D4AF37] hover:text-[#591C21] underline decoration-[#D4AF37]"
                     >
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#591C21] mb-1 text-sm md:text-base">Email Us</h3>
-                    <p className="text-[#2C1810]/80 text-xs md:text-base">hello@heerapannasaree.com</p>
+                    <p className="text-[#2C1810]/80 text-xs md:text-base">ajaysatwani8@gmail.com</p>
                   </div>
                 </div>
 

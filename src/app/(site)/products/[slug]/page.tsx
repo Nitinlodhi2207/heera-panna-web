@@ -87,7 +87,7 @@ export default async function ProductPage({ params }: Props) {
 
   const productUrl = `https://www.heerapannasaree.com/products/${slug}`;
   const whatsappMessage = `Hi, I am interested in the ${product.name}. Can you please share the price and availability? Product Link: ${productUrl}`;
-  const whatsappLink = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = `https://wa.me/918982826000?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Ensure we have an array of images for the gallery
   const galleryImages = product.gallery || (product.imageUrl ? [product.imageUrl] : []);

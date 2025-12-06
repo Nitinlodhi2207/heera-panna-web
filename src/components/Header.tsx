@@ -71,7 +71,7 @@ export default function Header() {
             <Search className="h-4 w-4" />
           </button>
           <Link 
-            href="https://wa.me/919876543210" 
+            href="https://wa.me/918982826000" 
             target="_blank"
             aria-label="Enquire on WhatsApp"
             className={cn(

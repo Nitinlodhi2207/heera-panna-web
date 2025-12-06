@@ -88,7 +88,7 @@ export default function SiteLayout({
             name: "Heera Panna Saree",
             url: "https://www.heerapannasaree.com",
             image: "https://www.heerapannasaree.com/logo.png", // Placeholder
-            phone: "+919876543210", // Placeholder, need from client
+            phone: "+918982826000",
             address: {
               street: "Rajwada",
               city: "Indore",
