@@ -69,7 +69,7 @@ export default async function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-            {['Maheshwari', 'Embroidered Saree', 'Designer Saree', 'Printed Saree', 'Silk Saree', 'Lehenga'].map((category) => {
+            {['Maheshwari', 'Embroidered Saree', 'Designer Saree', 'Printed Saree', 'Silk Saree', 'Lehenga', 'Partywear Saree', 'Lehenga Choli', 'Bandhani Saree', 'Banarasi Saree'].map((category) => {
               const thumbnail = getCategoryThumbnail(category);
               return (
                 <Link key={category} href={`/collections/${category.toLowerCase().replace(/\s+/g, '-')}`} className="group relative aspect-3/4 overflow-hidden rounded-lg bg-secondary/20">

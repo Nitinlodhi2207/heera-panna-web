@@ -9,36 +9,29 @@ const videos = [
     id: 1,
     title: "The Royal Heritage",
     subtitle: "Timeless Elegance for Your Special Day",
-    src: "https://videos.pexels.com/video-files/4057322/4057322-uhd_2160_3840_25fps.mp4", // Indian Bride
-    poster: "https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=1000&auto=format&fit=crop"
+    src: "https://res.cloudinary.com/dgs35slge/video/upload/v1765530561/1212_2_mkfz9s.mp4",
+    poster: "https://res.cloudinary.com/dgs35slge/video/upload/f_auto,q_auto,so_0/v1765530561/1212_2_mkfz9s.jpg"
   },
   {
     id: 2,
     title: "Silk & Grace",
     subtitle: "Handwoven Masterpieces",
-    src: "https://videos.pexels.com/video-files/6394054/6394054-uhd_2160_3840_25fps.mp4", // Fashion Walk
-    poster: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop"
+    src: "https://res.cloudinary.com/dgs35slge/video/upload/v1765530546/1212_2_3_ashvxa.mp4",
+    poster: "https://res.cloudinary.com/dgs35slge/video/upload/f_auto,q_auto,so_0/v1765530546/1212_2_3_ashvxa.jpg"
   },
   {
     id: 3,
     title: "Golden Threads",
     subtitle: "Weaving Dreams into Reality",
-    src: "https://videos.pexels.com/video-files/3753633/3753633-hd_1080_1920_25fps.mp4", // Fabric Texture
-    poster: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1000&auto=format&fit=crop"
+    src: "https://res.cloudinary.com/dgs35slge/video/upload/v1765530546/1212_2_1_sawkbu.mp4",
+    poster: "https://res.cloudinary.com/dgs35slge/video/upload/f_auto,q_auto,so_0/v1765530546/1212_2_1_sawkbu.jpg"
   },
   {
     id: 4,
     title: "The Bridal Glow",
     subtitle: "Radiate Beauty in Every Drape",
-    src: "https://videos.pexels.com/video-files/5380876/5380876-hd_1080_1920_30fps.mp4", // Jewelry/Details
-    poster: "https://images.unsplash.com/photo-1583391733958-e023765f350a?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    id: 5,
-    title: "Eternal Love",
-    subtitle: "Celebrate Your Union with Heera Panna",
-    src: "https://videos.pexels.com/video-files/3205809/3205809-hd_1920_1080_25fps.mp4", // Celebration
-    poster: "https://images.unsplash.com/photo-1566221704285-2d188422960d?q=80&w=2070&auto=format&fit=crop"
+    src: "https://res.cloudinary.com/dgs35slge/video/upload/v1765530544/1212_2_2_nrcpj4.mp4",
+    poster: "https://res.cloudinary.com/dgs35slge/video/upload/f_auto,q_auto,so_0/v1765530544/1212_2_2_nrcpj4.jpg"
   }
 ];
 
