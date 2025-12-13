@@ -32,6 +32,128 @@ export const PRODUCTS = [
     weave: 'Handloom',
     occasion: 'Festive / Casual'
   },
+  {
+    _id: 'm2',
+    name: 'Beige Handloom Saree with Red and Orange Striped Pallu',
+    slug: 'beige-handloom-saree-red-orange-striped-pallu',
+    description: 'Beautiful Beige Handloom Saree with vibrant red and orange striped pallu, perfect for traditional and festive wear.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764760858/knjn_xplwpp.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764760858/knjn_xplwpp.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764760843/aksn_yaoxmo.png'
+    ],
+    fabric: 'Maheshwari Silk Cotton',
+    weave: 'Handloom',
+    occasion: 'Festive / Traditional'
+  },
+  {
+    _id: 'm3',
+    name: 'Cream Printed Saree with Nature and Animal Motifs',
+    slug: 'cream-printed-saree-nature-animal-motifs',
+    description: 'Elegant Cream Maheshwari Saree with beautiful nature and animal motifs, ideal for casual and daily wear.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764750735/lkanf_jb28th.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764750735/lkanf_jb28th.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764750882/knd_p6fid9.png'
+    ],
+    fabric: 'Maheshwari Cotton',
+    weave: 'Printed',
+    occasion: 'Casual / Daily Wear'
+  },
+  {
+    _id: 'm4',
+    name: 'Handloom Off-White Saree with Lavender Border and Motifs',
+    slug: 'handloom-offwhite-saree-lavender-border-motifs',
+    description: 'Graceful Off-White Handloom Maheshwari Saree with elegant lavender border and traditional motifs.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764746377/KLKCVLNN_ld8mwc.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764746377/KLKCVLNN_ld8mwc.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764746275/DPFDVN_ncldnr.png'
+    ],
+    fabric: 'Maheshwari Silk Cotton',
+    weave: 'Handloom',
+    occasion: 'Festive / Casual'
+  },
+  {
+    _id: 'm5',
+    name: 'Mustard Yellow Handloom Saree with Olive Green Pallu and Folk Art Motifs',
+    slug: 'mustard-yellow-handloom-saree-olive-green-pallu-folk-art',
+    description: 'Vibrant Mustard Yellow Handloom Saree with olive green pallu and traditional folk art motifs.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764749975/klknddv_m_sx3ipn.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764749975/klknddv_m_sx3ipn.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764749907/khk_mzenfp.png'
+    ],
+    fabric: 'Maheshwari Silk Cotton',
+    weave: 'Handloom',
+    occasion: 'Festive / Traditional'
+  },
+  {
+    _id: 'm6',
+    name: 'Off-White Saree with Grey Zigzag and Geometric Border',
+    slug: 'offwhite-saree-grey-zigzag-geometric-border',
+    description: 'Contemporary Off-White Maheshwari Saree with modern grey zigzag and geometric border design.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764750962/LSMMD_qo6t8d.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764750962/LSMMD_qo6t8d.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764750991/KXV_f1pufj.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764748512/SLKDKN_hqrgdr.png'
+    ],
+    fabric: 'Maheshwari Cotton',
+    weave: 'Handloom',
+    occasion: 'Casual / Office Wear'
+  },
+  {
+    _id: 'm7',
+    name: 'Teal Blue Handloom Saree with Beige Pallu and Gold Woven Motifs',
+    slug: 'teal-blue-handloom-saree-beige-pallu-gold-motifs',
+    description: 'Stunning Teal Blue Handloom Saree with beige pallu and elegant gold woven motifs.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764760071/alnf_lwhnvp.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764760071/alnf_lwhnvp.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764760060/khkh_tcxyt2.png'
+    ],
+    fabric: 'Maheshwari Silk Cotton',
+    weave: 'Handloom',
+    occasion: 'Festive / Wedding'
+  },
+  {
+    _id: 'm8',
+    name: 'Teal Blue Traditional Saree with Temple-Themed Gold Motifs',
+    slug: 'teal-blue-traditional-saree-temple-gold-motifs',
+    description: 'Traditional Teal Blue Maheshwari Saree with intricate temple-themed gold motifs, perfect for religious and festive occasions.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764747292/AAH_eu1jru.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764747292/AAH_eu1jru.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764747278/sKN_ogglov.png'
+    ],
+    fabric: 'Maheshwari Silk',
+    weave: 'Handloom',
+    occasion: 'Festive / Religious'
+  },
+  {
+    _id: 'm9',
+    name: 'Women\'s Ethnic Wear',
+    slug: 'womens-ethnic-wear-maheshwari',
+    description: 'Classic Maheshwari Saree perfect for ethnic and traditional occasions, showcasing timeless elegance.',
+    category: { name: 'Maheshwari', slug: { current: 'maheshwari' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592363/mklkdn_ibvdfw.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592363/mklkdn_ibvdfw.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592309/khadi_qdwveh.png',
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592508/hhd_pfi4ks.png'
+    ],
+    fabric: 'Maheshwari Cotton',
+    weave: 'Handloom',
+    occasion: 'Ethnic / Traditional'
+  },
 
   // Embroidered Saree Collection
   {
