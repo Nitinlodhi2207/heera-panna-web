@@ -66,7 +66,7 @@ export default async function CollectionsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background pb-10 md:pb-20">
+    <div className="min-h-screen bg-background pb-20 md:pb-20">
       {/* Header Section */}
       <div className="bg-secondary/30 py-6 md:py-20">
         <div className="container px-4 text-center">

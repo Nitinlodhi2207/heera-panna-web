@@ -45,6 +45,16 @@
   }
 }
 
+/* Swiper Custom Styles */
+.thumbs-swiper .swiper-slide {
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
 /* Utilities */
 @utility container {
   margin-inline: auto;

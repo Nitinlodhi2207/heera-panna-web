@@ -288,9 +288,8 @@ export const PRODUCTS = [
     slug: 'white-purple-elegant-embroidered-lehenga',
     description: 'Elegant White and Purple Lehenga with sophisticated embroidery.',
     category: { name: 'Embroidered Saree', slug: { current: 'embroidered-saree' } },
-    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764590883/Untitled_desigjn_dhcgck.png',
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591024/hjj_elfi48.png',
     gallery: [
-      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764590883/Untitled_desigjn_dhcgck.png',
       'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591024/hjj_elfi48.png',
       'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764590882/lkxdla_btn3sv.png'
     ],
