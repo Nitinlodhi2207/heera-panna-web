@@ -125,9 +125,9 @@ export default async function Home() {
                 Read Our Story &rarr;
               </Link>
             </div>
-            <div className="order-1 md:order-2 aspect-square bg-gray-200 rounded-xl overflow-hidden relative">
+            <div className="order-1 md:order-2 aspect-[9/16] bg-gray-200 rounded-xl overflow-hidden relative w-full max-w-[350px] md:max-w-[400px] mx-auto shadow-lg">
                <Image
-                 src="https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764938444/hg_tiaqkd.png"
+                 src="https://res.cloudinary.com/dgs35slge/image/upload/v1764938444/hg_tiaqkd.png"
                  alt="Heera Panna Store"
                  fill
                  className="object-cover"
