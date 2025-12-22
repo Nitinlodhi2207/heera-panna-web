@@ -16,39 +16,57 @@ export const metadata: Metadata = {
 const MOCK_CATEGORIES = [
   {
     _id: '1',
-    title: 'Maheshwari Sarees',
+    title: 'Maheshwari',
     slug: { current: 'maheshwari' },
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop'
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764663053/lkshf_bgrgtj.png'
   },
   {
     _id: '2',
-    title: 'Silk Sarees',
-    slug: { current: 'silk' },
-    image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1000&auto=format&fit=crop'
+    title: 'Embroidered Saree',
+    slug: { current: 'embroidered-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592553/knn_hpirhw.png'
   },
   {
     _id: '3',
-    title: 'Cotton & Daily Wear',
-    slug: { current: 'cotton' },
-    image: 'https://images.unsplash.com/photo-1583391733958-e023765f350a?q=80&w=1000&auto=format&fit=crop'
+    title: 'Designer Saree',
+    slug: { current: 'designer-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591768/khkdf_sozhuw.png'
   },
   {
     _id: '4',
-    title: 'Wedding Collection',
-    slug: { current: 'wedding' },
-    image: 'https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=1000&auto=format&fit=crop'
+    title: 'Printed Saree',
+    slug: { current: 'printed-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591660/ygas_ozdixb.png'
   },
   {
     _id: '5',
-    title: 'Chanderi Sarees',
-    slug: { current: 'chanderi' },
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop'
+    title: 'Silk Saree',
+    slug: { current: 'silk-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591955/hjhj_rjriwz.png'
   },
   {
     _id: '6',
-    title: 'Banarasi',
-    slug: { current: 'banarasi' },
-    image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1000&auto=format&fit=crop'
+    title: 'Partywear Saree',
+    slug: { current: 'partywear-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1765536867/sdfdojf_n1yrl4.png'
+  },
+  {
+    _id: '7',
+    title: 'Lehenga Choli',
+    slug: { current: 'lehenga-choli' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592566/jahj_qefgmz.png'
+  },
+  {
+    _id: '8',
+    title: 'Bandhani Saree',
+    slug: { current: 'bandhani-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764842647/fmkmf_gakb0h.png'
+  },
+  {
+    _id: '9',
+    title: 'Banarasi Saree',
+    slug: { current: 'banarasi-saree' },
+    image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764840753/hggjf_otdwyg.png'
   }
 ];
 
@@ -84,7 +102,7 @@ export default async function CollectionsPage() {
             <Link 
               key={category._id} 
               href={`/collections/${category.slug.current}`}
-              className="group relative aspect-[4/3] overflow-hidden rounded-lg md:rounded-2xl bg-secondary/20 block"
+              className="group relative aspect-[4/5] overflow-hidden rounded-lg md:rounded-2xl bg-secondary/20 block"
             >
               {/* Image */}
               {category.image ? (

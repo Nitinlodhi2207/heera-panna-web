@@ -1,20 +1,4 @@
 export const PRODUCTS = [
-  // Lehenga Collection
-  {
-    _id: 'l1',
-    name: 'Exclusive Bridal Lehenga',
-    slug: 'exclusive-bridal-lehenga',
-    description: 'Exquisite Bridal Lehenga with intricate embroidery and premium fabric.',
-    category: { name: 'Lehenga', slug: { current: 'lehenga' } },
-    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764938662/bbridal_nwbjaw.png',
-    gallery: [
-      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764938662/bbridal_nwbjaw.png'
-    ],
-    fabric: 'Silk / Velvet',
-    weave: 'Embroidered',
-    occasion: 'Wedding / Bridal'
-  },
-
   // Maheshwari Collection
   {
     _id: 'm1',
@@ -156,21 +140,6 @@ export const PRODUCTS = [
   },
 
   // Embroidered Saree Collection
-  {
-    _id: 'e1',
-    name: 'Embroidered Wine Bridal Party Lehenga Choli',
-    slug: 'embroidered-wine-bridal-party-lehenga-choli',
-    description: 'Stunning Wine colored Lehenga Choli with heavy embroidery, perfect for bridal and party wear.',
-    category: { name: 'Embroidered Saree', slug: { current: 'embroidered-saree' } },
-    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592553/knn_hpirhw.png',
-    gallery: [
-      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592553/knn_hpirhw.png',
-      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764592566/jahj_qefgmz.png'
-    ],
-    fabric: 'Velvet / Silk',
-    weave: 'Embroidered',
-    occasion: 'Bridal / Party'
-  },
   {
     _id: 'e2',
     name: 'Lavender Silver Embroidered Elegant Saree',
@@ -434,6 +403,20 @@ export const PRODUCTS = [
 
   // Lehenga Choli Collection
   {
+    _id: 'l1',
+    name: 'Exclusive Bridal Lehenga',
+    slug: 'exclusive-bridal-lehenga',
+    description: 'Exquisite Bridal Lehenga with intricate embroidery and premium fabric.',
+    category: { name: 'Lehenga Choli', slug: { current: 'lehenga-choli' } },
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764938662/bbridal_nwbjaw.png',
+    gallery: [
+      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764938662/bbridal_nwbjaw.png'
+    ],
+    fabric: 'Silk / Velvet',
+    weave: 'Embroidered',
+    occasion: 'Wedding / Bridal'
+  },
+  {
     _id: 'lc1',
     name: 'Embroidered Wine Bridal Party Lehenga Choli',
     slug: 'embroidered-wine-bridal-party-lehenga-choli',
@@ -501,9 +484,8 @@ export const PRODUCTS = [
     slug: 'white-purple-elegant-embroidered-lehenga',
     description: 'Elegant White and Purple Lehenga with sophisticated embroidery.',
     category: { name: 'Lehenga Choli', slug: { current: 'lehenga-choli' } },
-    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764590883/Untitled_desigjn_dhcgck.png',
+    imageUrl: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591024/hjj_elfi48.png',
     gallery: [
-      'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764590883/Untitled_desigjn_dhcgck.png',
       'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764591024/hjj_elfi48.png',
       'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764590882/lkxdla_btn3sv.png'
     ],

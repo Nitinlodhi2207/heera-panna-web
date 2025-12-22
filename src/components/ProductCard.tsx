@@ -20,7 +20,7 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/products/${product.slug}`} className="group block">
-      <div className="relative aspect-[3/4] overflow-hidden rounded-md md:rounded-lg bg-secondary/20">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-md md:rounded-lg bg-secondary/20">
         {product.imageUrl ? (
           <Image
             src={typeof product.imageUrl === 'string' ? product.imageUrl : urlFor(product.imageUrl).width(500).height(667).url()}

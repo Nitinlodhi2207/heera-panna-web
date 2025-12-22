@@ -7,7 +7,6 @@ const categories = [
   { id: 3, name: 'Designer Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764591768/khkdf_sozhuw.png' },
   { id: 4, name: 'Printed Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764591660/ygas_ozdixb.png' },
   { id: 5, name: 'Silk Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764591955/hjhj_rjriwz.png' },
-  { id: 6, name: 'Wedding', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764588481/45_wzgahp.png' },
   { id: 7, name: 'Partywear Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1765536867/sdfdojf_n1yrl4.png' },
   { id: 8, name: 'Lehenga Choli', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764592566/jahj_qefgmz.png' },
   { id: 9, name: 'Bandhani Saree', image: 'https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto,w_200/v1764842647/fmkmf_gakb0h.png' },

@@ -39,9 +39,9 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 text-[#2C1810]/80">
               <li><Link href="/collections/maheshwari" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Maheshwari</Link></li>
-              <li><Link href="/collections/silk" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Silk Sarees</Link></li>
-              <li><Link href="/collections/cotton" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Cotton</Link></li>
-              <li><Link href="/collections/wedding" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Wedding Edit</Link></li>
+              <li><Link href="/collections/silk-saree" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Silk Sarees</Link></li>
+              <li><Link href="/collections/embroidered-saree" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Embroidered Sarees</Link></li>
+              <li><Link href="/collections/lehenga-choli" className="hover:text-[#591C21] hover:translate-x-1 transition-all inline-block">Lehenga Choli</Link></li>
             </ul>
           </div>
 

@@ -22,7 +22,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[30vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[#591C21]/90 z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1610189012906-4783fdae2b2b?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-40 z-0" />
+        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dgs35slge/image/upload/f_auto,q_auto/v1764588481/45_wzgahp.png')] bg-cover bg-center opacity-40 z-0" />
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
           <span className="text-[#D4AF37] text-xs md:text-base font-medium tracking-[0.2em] uppercase mb-2 md:mb-4 block">
             Our Heritage
@@ -43,8 +43,8 @@ export default function AboutPage() {
             <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-full h-full border-2 border-[#D4AF37] rounded-sm z-0" />
             <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-sm shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1583391726247-12b52ce0645d?q=80&w=1974&auto=format&fit=crop"
-                alt="Saree Craftsmanship"
+                src="https://res.cloudinary.com/dgs35slge/image/upload/v1764938444/hg_tiaqkd.png"
+                alt="Heera Panna Store"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -147,7 +147,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-48 md:h-auto">
               <Image
-                src="https://images.unsplash.com/photo-1566221704285-2d188422960d?q=80&w=2070&auto=format&fit=crop"
+                src="https://res.cloudinary.com/dgs35slge/image/upload/v1764938444/hg_tiaqkd.png"
                 alt="Heera Panna Store Ambience"
                 fill
                 className="object-cover"

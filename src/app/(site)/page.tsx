@@ -69,10 +69,10 @@ export default async function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-            {['Maheshwari', 'Embroidered Saree', 'Designer Saree', 'Printed Saree', 'Silk Saree', 'Lehenga', 'Partywear Saree', 'Lehenga Choli', 'Bandhani Saree', 'Banarasi Saree'].map((category) => {
+            {['Maheshwari', 'Embroidered Saree', 'Designer Saree', 'Printed Saree', 'Silk Saree', 'Partywear Saree', 'Lehenga Choli', 'Bandhani Saree', 'Banarasi Saree'].map((category) => {
               const thumbnail = getCategoryThumbnail(category);
               return (
-                <Link key={category} href={`/collections/${category.toLowerCase().replace(/\s+/g, '-')}`} className="group relative aspect-3/4 overflow-hidden rounded-lg bg-secondary/20">
+                <Link key={category} href={`/collections/${category.toLowerCase().replace(/\s+/g, '-')}`} className="group relative aspect-[4/5] overflow-hidden rounded-lg bg-secondary/20">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors z-10" />
                   {/* Category Image */}
                   {thumbnail ? (

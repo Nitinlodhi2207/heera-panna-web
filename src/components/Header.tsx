@@ -44,7 +44,7 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden lg:flex items-center gap-12">
-          {['Maheshwari', 'Silk', 'Cotton', 'Bridal Hub', 'Blog', 'About', 'Contact'].map((item) => (
+          {['Maheshwari', 'Silk', 'Bridal Hub', 'Blog', 'About', 'Contact'].map((item) => (
             <Link 
               key={item}
               href={

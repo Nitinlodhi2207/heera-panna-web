@@ -42,10 +42,10 @@ export default function MobileFooter() {
 
         {/* Quick Links Chips */}
         <div className="flex gap-3 overflow-x-auto pb-4 no-scrollbar -mx-5 px-5">
-          {['Maheshwari', 'Silk', 'Cotton', 'Wedding', 'New Arrivals'].map((item) => (
+          {['Maheshwari', 'Silk Saree', 'Embroidered Saree', 'Lehenga Choli', 'New Arrivals'].map((item) => (
             <Link 
               key={item} 
-              href={`/collections/${item.toLowerCase()}`}
+              href={`/collections/${item.toLowerCase().replace(/\s+/g, '-')}`}
               className="whitespace-nowrap rounded-full bg-white border border-[#D4AF37]/30 px-5 py-2 text-xs font-medium text-[#591C21] shadow-sm hover:bg-[#591C21] hover:text-[#D4AF37] transition-colors"
             >
               {item}
@@ -66,9 +66,9 @@ export default function MobileFooter() {
             <div className={cn("overflow-hidden transition-all duration-300 ease-in-out", openSection === 'collections' ? "max-h-48 opacity-100" : "max-h-0 opacity-0")}>
               <ul className="space-y-3 pb-4 text-sm text-[#2C1810]/80 pl-2">
                 <li><Link href="/collections/maheshwari" className="block py-1">Maheshwari Sarees</Link></li>
-                <li><Link href="/collections/silk" className="block py-1">Silk Sarees</Link></li>
-                <li><Link href="/collections/cotton" className="block py-1">Cotton & Daily Wear</Link></li>
-                <li><Link href="/collections/wedding" className="block py-1">Wedding Collection</Link></li>
+                <li><Link href="/collections/silk-saree" className="block py-1">Silk Sarees</Link></li>
+                <li><Link href="/collections/embroidered-saree" className="block py-1">Embroidered Sarees</Link></li>
+                <li><Link href="/collections/lehenga-choli" className="block py-1">Lehenga Choli</Link></li>
               </ul>
             </div>
           </div>
