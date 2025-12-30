@@ -29,6 +29,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         "@type": "Store",
         "name": data.name,
         "image": data.image,
+        "logo": data.logo, // Critical for Google Search logo display
         "@id": data.url,
         "url": data.url,
         "telephone": data.phone,

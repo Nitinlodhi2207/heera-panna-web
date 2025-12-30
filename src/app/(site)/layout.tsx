@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     siteName: "Heera Panna Saree",
     images: [
       {
-        url: "/og-image.jpg", // Ensure this image exists in public folder
-        width: 1200,
-        height: 630,
-        alt: "Heera Panna Saree Collection",
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Heera Panna Saree Logo",
       },
     ],
   },
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Heera Panna Saree | Premium Maheshwari & Silk Sarees",
     description: "Discover the finest collection of Maheshwari, Silk, and Cotton sarees at Heera Panna Saree, Rajwada, Indore.",
-    images: ["/og-image.jpg"], // Ensure this image exists in public folder
-    creator: "@heerapannasaree", // Replace with actual handle if available
+    images: ["/logo.png"],
+    creator: "@heerapannasaree",
   },
   verification: {
     google: "google-site-verification-code", // Replace with actual code
@@ -82,12 +82,24 @@ export default function SiteLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://cdn.sanity.io" />
+        {/* Organization Schema - Critical for Google Search Logo */}
+        <StructuredData 
+          type="organization" 
+          data={{
+            name: "Heera Panna Saree",
+            url: "https://www.heerapannasaree.com",
+            logo: "https://www.heerapannasaree.com/logo.png",
+            phone: "+918982826000"
+          }} 
+        />
+        {/* Local Business Schema */}
         <StructuredData 
           type="localBusiness" 
           data={{
             name: "Heera Panna Saree",
             url: "https://www.heerapannasaree.com",
-            image: "https://www.heerapannasaree.com/logo.png", // Placeholder
+            image: "https://www.heerapannasaree.com/logo.png",
+            logo: "https://www.heerapannasaree.com/logo.png",
             phone: "+918982826000",
             address: {
               street: "Rajwada",
@@ -96,7 +108,7 @@ export default function SiteLayout({
               postalCode: "452002"
             },
             geo: {
-              latitude: "22.7196", // Approx Rajwada coords
+              latitude: "22.7196",
               longitude: "75.8577"
             }
           }} 
